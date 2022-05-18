@@ -5,6 +5,9 @@ syntax enable
 set t_Co=256
 set background=dark
 inoremap jk <ESC>
+inoremap Jk <ESC>
+inoremap JK <ESC>
+inoremap jK <ESC>
 
 lua require('plugins')
 colorscheme nordfox
