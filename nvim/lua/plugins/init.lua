@@ -24,6 +24,5 @@ return require('packer').startup(function(use)
   -- Put this at the end after all plugins
   if packer_bootstrap then
     require('packer').sync()
-    require('nvim-tree').setup()
   end
 end)

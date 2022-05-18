@@ -10,6 +10,11 @@ inoremap JK <ESC>
 inoremap jK <ESC>
 
 lua require('plugins')
+" setup nvim-tree
+runtime nvim-tree.vim
+lua << EOF
+  require('nvim-tree').setup()
+EOF
 colorscheme nordfox
 
 " Set internal encoding of vim, not needed on neovim, since coc.nvim using some
