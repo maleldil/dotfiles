@@ -2,6 +2,8 @@ if has("termguicolors")
   set termguicolors
 endif
 syntax enable
+set nocompatible
+set showmatch
 set t_Co=256
 set background=dark
 inoremap jk <ESC>
@@ -9,13 +11,14 @@ inoremap Jk <ESC>
 inoremap JK <ESC>
 inoremap jK <ESC>
 
-lua require('plugins')
-" setup nvim-tree
-runtime nvim-tree.vim
-lua << EOF
-  require('nvim-tree').setup()
-EOF
-colorscheme nordfox
+"  lua require('plugins')
+"  " setup nvim-tree
+"  runtime nvim-tree.vim
+"  lua << EOF
+"    require('nvim-tree').setup()
+"  EOF
+" silent! colorscheme nordfox
+silent! colorscheme duskfox
 
 " Set internal encoding of vim, not needed on neovim, since coc.nvim using some
 " unicode characters in the file autoload/float.vim
@@ -186,5 +189,13 @@ nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 set expandtab
 set shiftwidth=2
 set tabstop=2
+set softtabstop=2
 set autoindent
 set smartindent
+set number
+filetype plugin indent on
+set mouse=a
+set clipboard=unnamedplus
+filetype plugin on
+set cursorline
+set ttyfast
